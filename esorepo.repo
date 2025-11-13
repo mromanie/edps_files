@@ -1,6 +1,0 @@
-[esorepo]
-name=European Southern Observatory RPM repository for Fedora $releasever
-baseurl=https://ftp.eso.org/pub/dfs/pipelines/repositories/stable/fedora/39/$basearch
-enabled=1
-gpgcheck=1
-gpgkey=https://ftp.eso.org/pub/dfs/pipelines/repositories/stable/fedora/39/$basearch/eso-pubkey.asc
