@@ -1,0 +1,45 @@
+echo 
+
+URL="https://$(echo ${SPACE_ID} | sed 's/\//-/g').hf.space/panel/edps-gui"
+echo "================================================================================"
+echo "🔗 The EDPS-GUI is accessible at the following URL (copy and paste in new tab):"
+echo "                       $URL"
+echo "         (username:user; pwd: same as for logging into this JupyterLab)         "
+echo "================================================================================"
+
+echo
+echo Commands for the EDPS GUI:
+echo "   - gui_start: start the GUI (the GUI is started by default when the container is built)"
+echo "   - gui_check: check the status"
+echo "   - gui_stop: stop it"
+echo "   - gui_reinstall: reinstall the GUI, in case of upgrades to it"
+echo
+echo At startup, there are no pipelines installed.
+echo pipe_install installs the pipeline for a given instrument, including the demo data, if so wished.
+echo "   usage: pipe_install -h"
+echo
+echo To customise the shell prompt to identify who is working there, run the command:
+echo "   prompt_customise name"
+echo
+
+alias cp='cp -i'
+alias mv='mv -i'
+alias del='rm -i'
+alias bck='rm -i *~ .*~ #*# core'
+alias clean='find . -name "*~" -exec rm {} \;'
+alias dir='ls -ltFGh'
+alias ls='ls -G'
+alias ll='ls -la'
+alias grep='grep --color=auto'
+alias pse='ps -U $USER | more'
+
+export PATH=/home/user/bin/:/home/user/.local/bin:$PATH
+
+export PS1="[\[\033[01;34m\]\w\[\033[00m\]] $ "
+#export PS1="\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]$ "
+
+prompt_customise() {
+    local name=$1
+    export PS1="$name's terminal [\[\033[01;34m\]\w\[\033[00m\]] $ "
+}
+
