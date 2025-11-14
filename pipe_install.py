@@ -159,7 +159,7 @@ if __name__ == '__main__':
                         help='List the installed pipelines and exit')
     parser.add_argument('-dd', '--demodata_dir', type=str,
                         help='Root directory to write the demo data in',
-                        default='/home/user/EDPS_data/demodata')
+                        default='/opt/cloudadm/EDPS_data/demodata')
     parser.add_argument('-b', '--brew', type=str,
                         help='Path to the brew command',
                         default='/home/linuxbrew/.linuxbrew/bin/brew')

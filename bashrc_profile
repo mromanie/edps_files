@@ -33,7 +33,7 @@ alias ll='ls -la'
 alias grep='grep --color=auto'
 alias pse='ps -U $USER | more'
 
-export PATH=/home/user/bin/:/home/user/.local/bin:$PATH
+export PATH=/opt/cloudadm//bin/:/opt/cloudadm/.local/bin:$PATH
 export PIP_DISABLE_PIP_VERSION_CHECK=1
 
 export PS1="[\[\033[01;34m\]\w\[\033[00m\]] $ "

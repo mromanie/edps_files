@@ -2,17 +2,17 @@
 
 # Start Panel app
 echo "Starting EDPS-GUI app..."
-gui=$(find /home/user -name 'edps-gui.py')
+gui=$(find /opt/cloudadm -name 'edps-gui.py')
 
-source /home/user/python/venvs/edps/bin/activate
+source /opt/cloudadm/python/venvs/edps/bin/activate
 panel serve $gui \
       --plugins edpsgui.pdf_handler \
       --address 0.0.0.0 \
       --port 5006 \
       --prefix /panel \
       --allow-websocket-origin='*' \
-      >& /home/user/app/edps-gui.log \
+      >& /opt/cloudadm/app/edps-gui.log \
     &
 deactivate
 
-. /home/user/bin/splash.txt
+. /opt/cloudadm/bin/splash.txt

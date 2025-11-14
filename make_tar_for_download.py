@@ -68,7 +68,7 @@ if __name__ == '__main__':
     parser.add_argument('-e', '--edps_export_dir', type=str,
                         help='Root directory where EDPS exported the datasets of interest')
     parser.add_argument('-t', '--tar_path', help='Output tar file',
-                        default='/home/user/Notebooks/exported_files.tgz')
+                        default='/opt/cloudadm/Notebooks/exported_files.tgz')
     parser.add_argument('-f', '--filename_patterns', nargs='+',
                         help='File name patterns to be included in the output tar (space separated)')
     args = parser.parse_args()

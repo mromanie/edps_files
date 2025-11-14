@@ -6,5 +6,5 @@ if [[ -z "$running" ]]; then
   echo "The EDPS GUI is not running. Start it with: gui_start"
   echo
 else
-  . /home/user/bin/splash.txt
+  . /opt/cloudadm/bin/splash.txt
 fi
