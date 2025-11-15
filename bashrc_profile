@@ -1,6 +1,6 @@
 echo 
 
-URL="https://$(hostname -I | awk '{print $1}'):7860/edps-gui"
+URL="http://$(hostname -I | awk '{print $1}'):7860/edps-gui"
 echo "================================================================================"
 echo "🔗 The EDPS-GUI is accessible at the following URL (copy and paste in new tab):"
 echo "                       $URL"
