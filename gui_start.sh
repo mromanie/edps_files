@@ -11,6 +11,7 @@ panel serve $gui \
       --port 7860 \
       --prefix /panel \
       --basic-auth ${PANEL_AUTH} --cookie-secret ${PANEL_COOKIE} \
+      --admin \
       --allow-websocket-origin='*' \
       >& /opt/cloudadm/app/edps-gui.log \
     &
