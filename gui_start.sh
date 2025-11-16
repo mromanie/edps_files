@@ -8,8 +8,9 @@ source /opt/cloudadm/python/venvs/edps/bin/activate
 panel serve $gui \
       --plugins edpsgui.pdf_handler \
       --address 0.0.0.0 \
-      --port 5006 \
+      --port 7860 \
       --prefix /panel \
+      --basic-auth ${PANEL_AUTH} --cookie-secret ${PANEL_COOKIE} \
       --allow-websocket-origin='*' \
       >& /opt/cloudadm/app/edps-gui.log \
     &
