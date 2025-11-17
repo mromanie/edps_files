@@ -1,11 +1,13 @@
 #!/bin/bash
 
-running=`ps -ef | grep jupyter | grep lab | grep -v grep`
+# Match by port number (more reliable)
+running_pid=$(pgrep -f "jupyter-lab.*8888")
 
-if [[ -z "$running" ]]; then
-  echo "Jupyter Lab is not running. Start it with: lab_start"
-  echo
+if [ -n "$running_pid" ]; then
+    echo "Jupyter Lab is running (PID: $running_pid)"
+    
+    URL="http://$(hostname -I | awk '{print $1}'):8888/lab"
+    echo "Access Jupyter Lab at ${URL}"
 else
-  URL="http://$(hostname -I | awk '{print $1}'):8888/lab"     
-  echo "Access Jupyter Lab at ${URL}"
+    echo "Jupyter Lab is not running"
 fi
